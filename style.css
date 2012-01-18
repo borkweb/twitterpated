@@ -1,0 +1,50 @@
+/*
+Theme Name: Twitterpated
+Theme URI: http://borkweb.com
+Author: Matthew Batchelder
+Author URI: http://borkweb.com
+Description: Theme with a healthy mix of Twitter Bootstrap and DeviantArt sweetness
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: light, white, one-column, two-columns, right-sidebar, fixed-width, flexible-width
+*/
+
+body {
+	padding-top: 60px;
+}
+
+h3.twitter a {
+	background:url(images/twitter.png) no-repeat 100% 50%;
+	color:#222;
+	display:block;
+	width:100%;
+}
+
+.hero-unit p {
+	margin-top: 1em;
+}
+
+.gallery-container {
+	margin: 1em 0;
+	overflow: hidden;
+}
+
+.entry-content {
+	overflow: hidden;
+}
+
+.aligncenter {
+	text-align: middle;
+}
+
+#tweets p {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+#tweets ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
