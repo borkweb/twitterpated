@@ -11,6 +11,7 @@ Tags: light, white, one-column, two-columns, right-sidebar, fixed-width, flexibl
 */
 
 body {
+	background: url(images/dust.png);
 	padding-top: 60px;
 }
 
@@ -19,6 +20,21 @@ h3.twitter a {
 	color:#222;
 	display:block;
 	width:100%;
+}
+
+.hentry.post, 
+.hentry.page {
+	background: #fff;
+	margin-bottom: 20px;
+	padding: 15px 15px;
+
+	-moz-border-radius:    5px;
+	-webkit-border-radius: 5px;
+	border-radius:         5px;
+
+	-webkit-box-shadow: 0 2px 3px #ccc;
+	-moz-box-shadow:    0 2px 3px #ccc;
+	box-shadow:         0 2px 3px #ccc;
 }
 
 .hero-unit p {
