@@ -26,7 +26,7 @@ h3.twitter a {
 .hentry.page {
 	background: #fff;
 	margin-bottom: 20px;
-	padding: 15px 15px;
+	padding: 20px;
 
 	-moz-border-radius:    5px;
 	-webkit-border-radius: 5px;
@@ -46,8 +46,43 @@ h3.twitter a {
 	overflow: hidden;
 }
 
+.entry-header .entry-meta {
+	color: #aaa;
+	margin-bottom: 20px;
+}
+
+.entry-header .entry-meta a {
+	color: #555;
+}
+
+.entry-header h1 {
+	font-family: Georgia, serif;
+}
+
 .entry-content {
 	overflow: hidden;
+}
+
+.entry-content blockquote,
+.entry-content p {
+	line-height: 20px;
+	margin-bottom: 20px;
+}
+
+.hentry .comments-link,
+.hentry .edit-link {
+	display: inline-block;
+	float: right;
+}
+
+.hentry .edit-link {
+	margin-right: .5em;
+}
+
+.hentry .edit-link:after {
+	content: '|';
+	color: #ccc;
+	margin-left: .5em;
 }
 
 .aligncenter {
@@ -63,4 +98,31 @@ h3.twitter a {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+}
+
+.comment-form-comment label {
+	display: block;
+	float: none;
+	text-align: left;
+	width: auto;
+}
+
+#comment {
+	width: 80%;
+}
+
+.comment-subscription-form label {
+	float: none;
+}
+
+.alignright {
+	float: right;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+.alignleft {
+	float: left;
+	margin-bottom: 1em;
+	margin-right: 1em;
 }

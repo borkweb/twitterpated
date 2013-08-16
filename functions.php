@@ -1,30 +1,10 @@
 <?php
 
+require 'includes/class-twp.php';
 require 'includes/TWP_DropDown_Walker.class.php';
 
-function twp_theme_setup() {
-	add_theme_support( 'menus' );
-
-	register_sidebar( array(
-		'name' => 'Hero Widgets',
-		'id' => 'sidebar-hero-widgets',
-		'before_widget' => '<div id="tweets">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="twitter">',
-		'after_title' => '</h3>',
-	));
-		
-	/** This theme uses wp_nav_menu() in one location */
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'twp' ),
-	) );
-
-	register_nav_menus( array(
-		'home_artist' => __( 'Home: Artist', 'twp' ),
-	) );
-}//end twp_theme_setup
-
-twp_theme_setup();
+$twp = new Twp;
+$twp->init();
 
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -33,11 +13,11 @@ twp_theme_setup();
  * @since Twenty Eleven 1.0
  */
 function twitterpated_posted_on() {
-	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'twitterpated' ),
+	printf( __( '<span class="date"><span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a></span><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'twitterpated' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
+		esc_html( get_the_date('M d, Y') ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 		sprintf( esc_attr__( 'View all posts by %s', 'twitterpated' ), get_the_author() ),
 		esc_html( get_the_author() )
